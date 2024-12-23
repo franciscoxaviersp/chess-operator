@@ -1,0 +1,23 @@
+# permissions for end users to view chessplayers.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: chess-operator
+    app.kubernetes.io/managed-by: kustomize
+  name: chessplayer-viewer-role
+rules:
+- apiGroups:
+  - chess.k8s.io.my.domain
+  resources:
+  - chessplayers
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - chess.k8s.io.my.domain
+  resources:
+  - chessplayers/status
+  verbs:
+  - get

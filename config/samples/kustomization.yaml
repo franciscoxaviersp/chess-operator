@@ -1,0 +1,6 @@
+## Append samples of your project ##
+resources:
+- chess.k8s.io_v1alpha1_chessboard.yaml
+- chess.k8s.io_v1alpha1_chessai.yaml
+- chess.k8s.io_v1alpha1_chessplayer.yaml
+# +kubebuilder:scaffold:manifestskustomizesamples
